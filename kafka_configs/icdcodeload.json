@@ -1,0 +1,12 @@
+{
+  "name": "file-source-connector-icd",
+  "config": {
+    "connector.class": "org.apache.kafka.connect.file.FileStreamSourceConnector",
+    "tasks.max": "1",
+    "file": "/path/to/D_ICD_DIAGNOSES.csv",
+    "topic": "rawdata-icdcodes",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter.schemas.enable": "false"
+  }
+}

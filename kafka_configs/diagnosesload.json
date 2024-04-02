@@ -1,0 +1,12 @@
+{
+  "name": "file-source-connector-daignoses",
+  "config": {
+    "connector.class": "org.apache.kafka.connect.file.FileStreamSourceConnector",
+    "tasks.max": "1",
+    "file": "/path/to/DIAGNOSES_ICD.csv",
+    "topic": "rawdata-diagnoses",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter.schemas.enable": "false"
+  }
+}
